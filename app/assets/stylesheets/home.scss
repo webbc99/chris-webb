@@ -1,0 +1,37 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*
+Available Google Fonts
+
+font-family: 'Quicksand', sans-serif;
+(400, 700)
+*/
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 1.66%;
+  font-weight: 700;
+  font-size: 23px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 20px;
+  width: 30%;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 1.66%;
+}
+
+.song {
+  height: 100px;
+  width: 30%;
+  float: left;
+  padding: 1.66%;
+  border: none;
+}
