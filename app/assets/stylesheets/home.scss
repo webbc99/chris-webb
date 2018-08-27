@@ -29,9 +29,24 @@ p {
 }
 
 .song {
-  height: 100px;
-  width: 30%;
-  float: left;
+  margin: auto;
+  width: 96.66%;
+  display: none;
   padding: 1.66%;
   border: none;
+}
+
+.song:first-of-type {
+  display: block;
+}
+
+#buttons {
+  text-align: center;
+  margin: auto;
+}
+
+.pic {
+  width: 30%;
+  float: left;
+  margin: 1.66%;
 }
