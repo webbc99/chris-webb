@@ -1,32 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Chris Webb</title>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <script>
-    var songIndex = 1;
-    showDivs(songIndex);
+<script>
+  var songIndex = 1;
+  showDivs(songIndex);
 
-    function plusDivs(n) {
-      showDivs(songIndex += n);
+  function plusDivs(n) {
+    showDivs(songIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("song");
+    if (n > x.length) {songIndex = 1}
+    if (n < 1) {songIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
     }
+    x[songIndex-1].style.display = "block";
+  }
+</script>
 
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("song");
-      if (n > x.length) {songIndex = 1}
-      if (n < 1) {songIndex = x.length} ;
-      for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-      }
-      x[songIndex-1].style.display = "block";
-    }
-  </script>
-</head>
-<body>
-
-<h2>Chris/Webb</h2>
+<h2 id="myName">
+  <span class="firstName" id="letterOne">C</span>
+  <span class="firstName" id="letterTwo">h</span>
+  <span class="firstName" id="letterThree">r</span>
+  <span class="firstName" id="letterFour">i</span>
+  <span class="firstName" id="letterFive">s</span>
+  <span class="slash" id="letterSix">/</span>
+  <span class="surname" id="letterSeven">W</span>
+  <span class="surname" id="letterEight">e</span>
+  <span class="surname" id="letterNine">b</span>
+  <span class="surname" id="letterTen">b</span>
+</h2>
 
 <div id="blurb">
   <p>Hi! Please find a selection of my songs below. Make sure to check out my profile on <a href="https://soundcloud.com/webbc99">SoundCloud!</a></p>
@@ -42,8 +45,9 @@
 </div>
 
 <div id="buttons">
-  <button class="button" onclick="plusDivs(-1)">Previous Track</button>
-  <button class="button" onclick="plusDivs(+1)">Next Track</button>
+  <button id="previousButton" class="button" onclick="plusDivs(-1)">Previous Track</button>
+  <span class="slash">/</span>
+  <button id="nextButton" class="button" onclick="plusDivs(+1)">Next Track</button>
 </div>
 
 <div id="images">
@@ -54,6 +58,3 @@
   <%= image_tag ('hayley.jpg'), :class => 'pic', :id => 'pic_5' %>
   <%= image_tag ('me_and_nicki.jpg'), :class => 'pic', :id => 'pic_6' %>
 </div>
-
-</body>
-</html>

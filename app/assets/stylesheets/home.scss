@@ -10,6 +10,24 @@ font-family: 'Quicksand', sans-serif;
 (400, 700)
 */
 
+@keyframes blueText {
+  from {
+    color: black;
+  }
+  to {
+    color: #30c3dd;
+  }
+}
+
+@keyframes pinkText {
+  from {
+    color: black;
+  }
+  to {
+    color: #f747eb;
+  }
+}
+
 h2 {
   font-family: 'Quicksand', sans-serif;
   margin-left: 1.66%;
@@ -49,4 +67,64 @@ p {
   width: 30%;
   float: left;
   margin: 1.66%;
+  filter: grayscale(100%);
+  transition: filter 2s;
+  border-radius: 10px;
+}
+
+.pic:hover {
+  filter: none;
+}
+
+.firstName {
+  color: #30c3dd;
+  animation-name: blueText;
+  animation-duration: 5s;
+}
+
+.surname {
+  color: #f747eb;
+  animation-name: pinkText;
+  animation-duration: 5s;
+}
+
+.slash {
+  color: black
+}
+
+.button {
+  width: 13%;
+  font-size: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+}
+
+#buttons .slash {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+#previousButton {
+  color: #30c3dd;
+  transition: color 4s, background-color 1.5s;
+}
+
+#previousButton:hover {
+  background-color: #30c3dd;
+  color: black;
+}
+
+#nextButton {
+  color: #f747eb;
+  transition: color 4s, background-color 1.5s;
+}
+
+#nextButton:hover {
+  background-color: #f747eb;
+  color: black;
 }
