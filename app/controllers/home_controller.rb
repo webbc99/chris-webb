@@ -5,8 +5,8 @@ class HomeController < ApplicationController
 
   def download_cwtd
     send_file(
-      "#{Rails.root}/public/cwtd.rar",
-      filename: "cwtd.rar",
+      "#{Rails.root}/public/CWTD.rar",
+      filename: "CWTD.rar",
       type: "application/rar"
       )
   end
