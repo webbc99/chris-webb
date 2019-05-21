@@ -1,0 +1,15 @@
+<p>If you're in need of a new website or application, or if you'd just like to chat, please drop me a message using the contact form below. I'm using a great service at <%= link_to 'formspree.io', 'https://formspree.io/' %> to handle emails, so if you get in touch you'll be briefly redirected to their site to confirm you're not a robot!</p>
+
+<div id="contact-me" class="container">
+  <form action="https://formspree.io/webbc99@gmail.com" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Name">
+    <label for="email">Email</label>
+    <input type="text" name="email" placeholder="Email address">
+    <label for="message">Message</label>
+    <textarea name="message" placeholder="Enter message here"style="height: 200px;"></textarea>
+    <input type="submit" value="Send">
+  </form>
+</div>
+
+<p><%= link_to 'Back to the home page', root_path %></p>

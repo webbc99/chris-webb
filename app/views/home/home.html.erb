@@ -18,22 +18,14 @@
   }
 </script>
 
-<h2 id="myName">
-  <span class="firstName" id="letterOne">C</span>
-  <span class="firstName" id="letterTwo">h</span>
-  <span class="firstName" id="letterThree">r</span>
-  <span class="firstName" id="letterFour">i</span>
-  <span class="firstName" id="letterFive">s</span>
-  <span class="slash" id="letterSix">/</span>
-  <span class="surname" id="letterSeven">W</span>
-  <span class="surname" id="letterEight">e</span>
-  <span class="surname" id="letterNine">b</span>
-  <span class="surname" id="letterTen">b</span>
-</h2>
-
 <div id="blurb">
-  <p>Hi! Please find a selection of my songs below. Make sure to check out my profile on <a href="https://soundcloud.com/webbc99">SoundCloud!</a></p>
-  <p>I've made a game! Right now it's just a simple tower defense game, but I'm having great fun writing the soundtrack. Download it <%= link_to 'here!', download_cwtd_path, :data => { :confirm => "Download my game?" } %></p>
+  <p>Hi! I'm Chris, a web developer and musician. Click <%= link_to 'here', projects_path %> to take a look at some of the websites and apps I've worked on. You'll find a lot of the code on my <%= link_to 'GitHub', 'https://github.com/webbc99/' %>.</p>
+
+  <p>I recently wrote and recorded a full soundtrack for a game my younger brother built called <%= link_to 'Synthetic Reaper', 'https://conor-mg.herokuapp.com/articles/39' %>. You can hear the full soundtrack <%= link_to 'here', 'https://soundcloud.com/webbc99/sets/synthetic-reaper-soundtrack' %> - please let me know what you think by adding a comment!</p>
+
+  <p>Please find a selection of my songs below. Make sure to check out my full profile on <a href="https://soundcloud.com/webbc99">SoundCloud!</a></p>
+
+  <p>I've made a game! It's a simple 3D tower defence game. Download it <%= link_to 'here!', download_cwtd_path, :data => { :confirm => "Download my game?" } %> I also wrote the soundtrack! You can check that out <%= link_to 'here', 'https://soundcloud.com/webbc99/sets/cwtd-soundtrack' %>.</p>
 
 </div>
 
@@ -61,4 +53,8 @@
   <%= image_tag ('dicklands.jpg'), :class => 'pic', :id => 'pic_4' %>
   <%= image_tag ('hayley.jpg'), :class => 'pic', :id => 'pic_5' %>
   <%= image_tag ('me_and_nicki.jpg'), :class => 'pic', :id => 'pic_6' %>
+</div>
+
+<div>
+  <p>For any enquires, please <%= link_to 'contact me', contact_path %>.</p>
 </div>
